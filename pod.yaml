@@ -1,15 +1,16 @@
+apiVersion: v1
 kind: Pod
-version: v1
 metadata:
-  name: argo-pod
+  name: nginx-pod
+  namespace: argocd           # Namespace change kar sakte ho ya default chhod do
   labels:
-    app: argoapp
+    app: nginx-app
 spec:
   containers:
-    - name: argo-container
-      image: argoproj/argosay:v2
-  ports:
-    - containerPort: 8080
+    - name: nginx-container
+      image: nginx:latest
+      ports:
+        - containerPort: 80
    
 
   
