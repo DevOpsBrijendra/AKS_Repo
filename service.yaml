@@ -1,13 +1,12 @@
 apiversion: v1
 kind: Service
 metadata:
-  name: nginx-Service
-  namespace: argocd
+  name: nginx
 spec:
   selector:
-    app: argo-nginx
-  type: clusterIP
+    app.kubernetes.io/name: argo-nginx
+  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8080
+      targetPort: 80
