@@ -2,7 +2,7 @@ apiversion: v1
 kind: Service
 metadata:
   name: nginx-Service
-  namespace: argocd
+  namespace: default
 spec:
   selector:
     app: argo-nginx
