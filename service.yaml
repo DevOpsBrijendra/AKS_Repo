@@ -1,0 +1,13 @@
+apiversion: v1
+kind: Service
+metadata:
+  name: nginx-Service
+  namespace: argocd
+spec:
+  selector:
+    app: argo-nginx
+  type: clusterIP
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
