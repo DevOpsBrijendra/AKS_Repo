@@ -1,11 +1,7 @@
 apiversion: v1
 kind: Service
 metadata:
-<<<<<<< HEAD
   name: nginx
-=======
-  name: nginx
->>>>>>> refs/remotes/origin/main
 spec:
   selector:
     app.kubernetes.io/name: argo-nginx
@@ -13,9 +9,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-<<<<<<< HEAD
       targetPort: 80
-=======
-      targetPort: 80
-  
->>>>>>> refs/remotes/origin/main
+
